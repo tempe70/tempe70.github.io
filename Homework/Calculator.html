@@ -5,9 +5,9 @@
  var total=0;
  var currentValue=0;
  function clickOne(){if(document.form1.display1.value>99){document.form1.display1.value=(document.form1.display1.value*1000)+document.form1.one.value;}
-                     if(document.form1.display1.value>9){document.form1.display1.value=(document.form1.display1.value*100)+document.form1.one.value;}
-                     if(document.form1.display1.value>0){document.form1.display1.value=(document.form1.display1.value*10)+document.form1.one.value;}
-                     if(document.form1.display1.value==0){document.form1.display1.value=document.form1.one.value;}
+                     else(document.form1.display1.value>9){document.form1.display1.value=(document.form1.display1.value*100)+document.form1.one.value;}
+                     else(document.form1.display1.value>0){document.form1.display1.value=(document.form1.display1.value*10)+document.form1.one.value;}
+                     else(document.form1.display1.value==0){document.form1.display1.value=document.form1.one.value;}
                     }
  function clickTwo(){document.form1.display1.value=document.form1.two.value;}
  function clickThree(){document.form1.display1.value=document.form1.three.value;}
