@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+ var total=0;
+ var currentValue=0;
+ function clickOne(){if(total>=99){total=(total*1000)+document.form1.one.value;}
+                     else(total>=9){total=(total*100)+document.form1.one.value;}
+                     else(total>=1){total=(total*10)+document.form1.one.value;}
+                     else(total==0){total=document.form1.one.value;}
+                     document.form1.display1.value=total;
+                    }
+ function clickTwo(){document.form1.display1.value=document.form1.two.value;}
+ function clickThree(){document.form1.display1.value=document.form1.three.value;}
+ function clickFour(){document.form1.display1.value=document.form1.four.value;}
+ function clickFive(){document.form1.display1.value=document.form1.five.value;}
+ function clickSix(){document.form1.display1.value=document.form1.six.value;}
+ function clickSeven(){document.form1.display1.value=document.form1.seven.value;}
+ function clickEight(){document.form1.display1.value=document.form1.eight.value;}
+ function clickNine(){document.form1.display1.value=document.form1.nine.value;}
+ function clickZero(){document.form1.display1.value=document.form1.zero.value;}
+ function clickEqual(){document.form1.display1.value=total;}
+ function clickPlus(){total=document.form1.display1.value;
+</script>
+<title>Calculator</title>
+</head>
+<body>
+<h1>h
+</h1>
+<p>
+<form name="form1" id="form01">
+<input type="text" cols="8" name="display1" id="display01" value="0"></input><br>
+<input type="button" name="one" id="one01" value="1" onclick="clickOne()"></input>
+<input type="button" name="two" id="two01" value="2" onclick="clickTwo()"></input>
+<input type="button" name="three" id="three01" value="3" onclick="clickThree()"></input>
+<input type="button" name="plus" id="plus01" value="+"></input><br>
+<input type="button" name="four" id="four01" value="4" onclick="clickFour()"></input>
+<input type="button" name="five" id="five01" value="5" onclick="clickFive()"></input>
+<input type="button" name="six" id="six01" value="6" onclick="clickSix()"></input>
+<input type="button" name="minus" id="minus01" value="-"></input><br>
+<input type="button" name="seven" id="seven01" value="7" onclick="clickSeven()"></input>
+<input type="button" name="eight" id="eight01" value="8" onclick="clickEight()"></input>
+<input type="button" name="nine" id="nine01" value="9" onclick="clickNine()"></input>
+<input type="button" name="mult" id="mult01" value="*"></input><br>
+<input type="button" name="clear" id="clear01" value="C"></input>
+<input type="button" name="zero" id="zero01" value="0" onclick="clickZero()"></input>
+<input type="button" name="equal" id="equal01" value="="></input>
+<input type="button" name="div" id="div01" value="/"></input>
+</form>
+</p>
+</body>
+</html> 
