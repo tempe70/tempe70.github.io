@@ -1,7 +1,10 @@
  <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+ var total=0;
+ function clickOne(){document.getElementById(display01.value)=document.getElementById(one01.value)}
+</script>
 <title>Calculator</title>
 </head>
 <body>
@@ -10,7 +13,7 @@
 </h1>
 <p>
 <form name="form1" id="form01">
-<input type="text" cols="8" name="display1" id="display01"></input><br>
+<input type="text" cols="8" name="display1" id="display01" value="0"></input><br>
 <input type="button" name="one" id="one01" value="1"></input>
 <input type="button" name="two" id="two01" value="2"></input>
 <input type="button" name="three" id="three01" value="3"></input>
