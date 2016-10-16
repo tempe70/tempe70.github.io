@@ -3,7 +3,12 @@
 <head>
 <script type="text/javascript">
  var total=0;
- function clickOne(){document.form1.display1.value=document.form1.one.value;}
+ var currentValue=0;
+ function clickOne(){if(document.form1.display1.value>99){document.form1.display1.value=(document.form1.display1.value*1000)+document.form1.one.value;}
+                     if(document.form1.display1.value>9){document.form1.display1.value=(document.form1.display1.value*100)+document.form1.one.value;}
+                     if(document.form1.display1.value>0){document.form1.display1.value=(document.form1.display1.value*10)+document.form1.one.value;}
+                     if(document.form1.display1.value==0){document.form1.display1.value=document.form1.one.value;}
+                    
  function clickTwo(){document.form1.display1.value=document.form1.two.value;}
  function clickThree(){document.form1.display1.value=document.form1.three.value;}
  function clickFour(){document.form1.display1.value=document.form1.four.value;}
@@ -13,6 +18,8 @@
  function clickEight(){document.form1.display1.value=document.form1.eight.value;}
  function clickNine(){document.form1.display1.value=document.form1.nine.value;}
  function clickZero(){document.form1.display1.value=document.form1.zero.value;}
+ function clickEqual(){document.form1.display1.value=total;}
+ function clickPlus(){total=document.form1.display1.value;
 </script>
 <title>Calculator</title>
 </head>
