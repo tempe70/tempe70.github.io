@@ -4,10 +4,11 @@
 <script type="text/javascript">
  var total=0;
  var currentValue=0;
- function clickOne(){if(document.form1.display1.value>=99){document.form1.display1.value=(document.form1.display1.value*1000)+document.form1.one.value;}
-                     else(document.form1.display1.value>=9){document.form1.display1.value=(document.form1.display1.value*100)+document.form1.one.value;}
-                     else(document.form1.display1.value>=1){document.form1.display1.value=(document.form1.display1.value*10)+document.form1.one.value;}
-                     else(document.form1.display1.value==0){document.form1.display1.value=document.form1.one.value;}
+ function clickOne(){if(total>=99){total=(total*1000)+document.form1.one.value;}
+                     else(total>=9){total=(total*100)+document.form1.one.value;}
+                     else(total>=1){total=(total*10)+document.form1.one.value;}
+                     else(total==0){total=document.form1.one.value;}
+                     document.form1.display1.value=total;
                     }
  function clickTwo(){document.form1.display1.value=document.form1.two.value;}
  function clickThree(){document.form1.display1.value=document.form1.three.value;}
