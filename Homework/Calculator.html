@@ -3,24 +3,100 @@
 <head>
 <script type="text/javascript">
  var total=0;
- var currentValue=0;
- function clickOne(){if(total>=99){total=(total*1000)+document.form1.one.value;}
-                     else(total>=9){total=(total*100)+document.form1.one.value;}
-                     else(total>=1){total=(total*10)+document.form1.one.value;}
-                     else(total==0){total=document.form1.one.value;}
-                     document.form1.display1.value=total;
-                    }
- function clickTwo(){document.form1.display1.value=document.form1.two.value;}
- function clickThree(){document.form1.display1.value=document.form1.three.value;}
- function clickFour(){document.form1.display1.value=document.form1.four.value;}
- function clickFive(){document.form1.display1.value=document.form1.five.value;}
- function clickSix(){document.form1.display1.value=document.form1.six.value;}
- function clickSeven(){document.form1.display1.value=document.form1.seven.value;}
- function clickEight(){document.form1.display1.value=document.form1.eight.value;}
- function clickNine(){document.form1.display1.value=document.form1.nine.value;}
- function clickZero(){document.form1.display1.value=document.form1.zero.value;}
- function clickEqual(){document.form1.display1.value=total;}
- function clickPlus(){total=document.form1.display1.value;
+ var addVariable=0;
+ var minusVariable=0;
+ var multVariable=1;
+ var divVariable=1;
+ var add=false;
+ var minus=false;
+ var mult=false;
+ var div=false;
+ function clickOne(){if(total>0){total=(total*10)+1;}
+                     else{total=1;}
+                     document.form1.display1.value=total;}
+ function clickTwo(){if(total>0){total=(total*10)+2;}
+                     else{total=2;}
+                     document.form1.display1.value=total;}
+ function clickThree(){if(total>0){total=(total*10)+3;}
+                     else{total=3;}
+                     document.form1.display1.value=total;}
+ function clickFour(){if(total>0){total=(total*10)+4;}
+                     else{total=4;}
+                     document.form1.display1.value=total;}
+ function clickFive(){if(total>0){total=(total*10)+5;}
+                     else{total=5;}
+                     document.form1.display1.value=total;}
+ function clickSix(){if(total>0){total=(total*10)+6;}
+                     else{total=6;}
+                     document.form1.display1.value=total;}
+ function clickSeven(){if(total>0){total=(total*10)+7;}
+                     else{total=7;}
+                     document.form1.display1.value=total;}
+ function clickEight(){if(total>0){total=(total*10)+8;}
+                     else{total=8;}
+                     document.form1.display1.value=total;}
+ function clickNine(){if(total>0){total=(total*10)+9;}
+                     else{total=9;}
+                     document.form1.display1.value=total;}
+ function clickZero(){if(total>0){total=total*10;}
+                     else{total=0;}
+                     document.form1.display1.value=total;}
+ function clickEqual(){ if(add==true){total=total+addVariable;}
+			if(minus==true){total=minusVariable-total;}
+			if(mult==true){total=total*multVariable;}
+			if(div==true){total=divVariable/total;}
+		        if(add==true||minus==true||mult==true||div==true){document.form1.display1.value=total;}
+			else{document.form1.display1.value="E"}}
+ function clickPlus(){addVariable=total;
+		        total=0;
+		        document.form1.display1.value=total;
+			add=true;
+			minus=false;
+			mult=false;
+			div=false;
+		        minusVariable=0;
+		        multVariable=1;
+			divVariable=1;}
+ function clickMinus(){minusVariable=total;
+		        total=0;
+		        document.form1.display1.value=total;
+			add=false;
+			minus=true;
+			mult=false;
+			div=false;
+		        addVariable=0;
+		        multVariable=1;
+			divVariable=1;}
+ function clickMult(){multVariable=total;
+		        total=0;
+		        document.form1.display1.value=total;
+			add=false;
+			minus=false;
+			mult=true;
+			div=false;
+		        minusVariable=0;
+		        addVariable=0;
+			divVariable=1;}
+ function clickDiv(){divVariable=total;
+		        total=0;
+		        document.form1.display1.value=total;
+			add=false;
+			minus=false;
+			mult=false;
+			div=true;
+		        minusVariable=0;
+		        multVariable=1;
+			addVariable=0;}
+ function clickClear(){total=0;
+			addVariable=0;
+		        minusVariable=0;
+		        multVariable=1;
+			divVariable=1;
+			add=false;
+			minus=false;
+			mult=false;
+			div=false;
+		        document.form1.display1.value=total;}
 </script>
 <title>Calculator</title>
 </head>
@@ -33,19 +109,19 @@
 <input type="button" name="one" id="one01" value="1" onclick="clickOne()"></input>
 <input type="button" name="two" id="two01" value="2" onclick="clickTwo()"></input>
 <input type="button" name="three" id="three01" value="3" onclick="clickThree()"></input>
-<input type="button" name="plus" id="plus01" value="+"></input><br>
+<input type="button" name="plus" id="plus01" value="+" onclick="clickPlus()"></input><br>
 <input type="button" name="four" id="four01" value="4" onclick="clickFour()"></input>
 <input type="button" name="five" id="five01" value="5" onclick="clickFive()"></input>
 <input type="button" name="six" id="six01" value="6" onclick="clickSix()"></input>
-<input type="button" name="minus" id="minus01" value="-"></input><br>
+<input type="button" name="minus" id="minus01" value="-" onclick="clickMinus()"></input><br>
 <input type="button" name="seven" id="seven01" value="7" onclick="clickSeven()"></input>
 <input type="button" name="eight" id="eight01" value="8" onclick="clickEight()"></input>
 <input type="button" name="nine" id="nine01" value="9" onclick="clickNine()"></input>
-<input type="button" name="mult" id="mult01" value="*"></input><br>
-<input type="button" name="clear" id="clear01" value="C"></input>
+<input type="button" name="mult" id="mult01" value="*" onclick="clickMult()"></input><br>
+<input type="button" name="clear" id="clear01" value="C" onclick="clickClear()"></input>
 <input type="button" name="zero" id="zero01" value="0" onclick="clickZero()"></input>
-<input type="button" name="equal" id="equal01" value="="></input>
-<input type="button" name="div" id="div01" value="/"></input>
+<input type="button" name="equal" id="equal01" value="=" onclick="clickEqual()"></input>
+<input type="button" name="div" id="div01" value="/" onclick="clickDiv()"></input>
 </form>
 </p>
 </body>
