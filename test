@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var x = document.form1.gloveSelect1.value;
+function gloves(){document.form1.gloveTotal.value=x;}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1><center>Basseda's Outfit Market</center></h1>
+<img src="http://nichedatafactory.com/wp-content/uploads/2014/08/mens-shirts-1010977.jpg">
+<h2><center>Order Form</center></h2>
+<center><table style="width 100%">
+
+	<tr>
+		<td>
+			<form name="shipTo">
+				Name:<input type="text" name="shipToName"><br>
+				Address:<input type="text" name="shipToAd"><br>
+				City:<input type="text" name="shipToCity">State:<select name="shipToState"><option id="chooseShip" value="">Choose a State</option><option id="nyShip" value="NY">NY</option><option id="ctShip" value="CT">CT</option></select>ZipCode:<input type="text" name="shipToZip"><br>
+				Telephone:<input type="text" name="shipToPhone">Email:<input type="text" name="shipToEmail">
+			</form>
+		</td>
+		<td>
+			<form name="billTo">
+				Name:<input type="text" name="billToName"><br>
+				Address:<input type="text" name="billToAd"><br>
+				City:<input type="text" name="billToCity">State:<select name="billToState"><option id="chooseBill" value="">Choose a State</option><option id="nyBill" value="NY">NY</option><option id="ctBill" value="CT">CT</option></select>ZipCode:<input type="text" name="shipToZip"><br>
+				Telephone:<input type="text" name="billToPhone">Email:<input type="text" name="billToEmail">
+			</form>
+		</td>
+	<tr>
+		<td>
+			<table border="1">
+				<tr>
+					<th>Item</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Cost</th>
+				</tr>
+				<tr>
+					<td>Gloves</td>
+					<td><form name="form1"><Select id="gloveSelect1" name="gloveSelect" onclick="gloves()"><option id="chooseGloves" value="0">Choose a Quantity</option><option id="chooseGloves1" value="1">1 Pair</option><option id="chooseGloves2" value="2">2 Pairs</option><option id="chooseGloves3" value="3">3 Pairs</option></Select></form></td>
+					<td>$15</td>
+					<td><input type="text" value="" name="gloveTotal"></td>
+				</tr>
+				<tr>
+					<td>Hats</td>
+					<td><Select name="hatSelect"><option id="chooseHat" value="0">Choose a Quantity</option><option id="chooseHat1" value="1">1</option><option id="chooseHat2" value="2">2</option></Select></td>
+					<td>$15</td>
+					<td><input type="text" value="" name="hatsTotal"></td>
+				</tr>
+				<tr>
+					<td colspan="3">6.25% Sales Tax:</td>
+					<td><input type="text" value="" name="tax"></td>
+				</tr>
+				<tr>
+					<td><bold>Shipping Method:</bold></td>
+					<td colspan="2"><select name="shipMeth"><option id="chooseShip" value="0">Choose One</option><option id="chooseShip1" value="5">Priority Mail</option><option id="chooseShip2" value="8">Over Night</option></select></td>
+					<td><input type="text" value="" name="shipping"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><bold>Total</bold></td>
+					<td><input type="text" value="" name="total"></td>
+				</tr>
+			</table>
+Total Sale:<input type="text"><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</table></center>
+
+
+</body>
+</html>
