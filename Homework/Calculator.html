@@ -13,40 +13,70 @@
  var div=false;
  function clickOne(){if(total>0){total=(total*10)+1;}
                      else{total=1;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickTwo(){if(total>0){total=(total*10)+2;}
                      else{total=2;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickThree(){if(total>0){total=(total*10)+3;}
                      else{total=3;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickFour(){if(total>0){total=(total*10)+4;}
                      else{total=4;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickFive(){if(total>0){total=(total*10)+5;}
                      else{total=5;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickSix(){if(total>0){total=(total*10)+6;}
                      else{total=6;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickSeven(){if(total>0){total=(total*10)+7;}
                      else{total=7;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickEight(){if(total>0){total=(total*10)+8;}
                      else{total=8;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickNine(){if(total>0){total=(total*10)+9;}
                      else{total=9;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickZero(){if(total>0){total=total*10;}
                      else{total=0;}
-                     document.form1.display1.value=total;}
+                     document.form1.display1.value=total;
+		     if(rad1==true){document.form1.display12.value=total}
+		     if(rad2==true){document.form1.display22.value=total}
+		    }
  function clickEqual(){ if(add==true){total=total+addVariable;}
 			if(minus==true){total=minusVariable-total;}
 			if(mult==true){total=total*multVariable;}
 			if(div==true){total=divVariable/total;}
 		        if(add==true||minus==true||mult==true||div==true){document.form1.display1.value=total;}
-			else{document.form1.display1.value="E"}}
+			if(rad1==true&&rad2==true){document.form1.display32.value=total;}
  function clickPlus(){addVariable=total;
 		        total=0;
 		        document.form1.display1.value=total;
@@ -97,6 +127,13 @@
 			mult=false;
 			div=false;
 		        document.form1.display1.value=total;}
+var box1;
+var box2;
+var rad1=false;
+var rad2=false;
+function clickRad1(){rad1=true;}
+function clickRad2(){rad2=true;}
+		     
 </script>
 <title>Calculator</title>
 </head>
@@ -122,6 +159,13 @@
 <input type="button" name="zero" id="zero01" value="0" onclick="clickZero()"></input>
 <input type="button" name="equal" id="equal01" value="=" onclick="clickEqual()"></input>
 <input type="button" name="div" id="div01" value="/" onclick="clickDiv()"></input>
+</form>
+<form name="form2" id="form02">
+<input type="text" cols="8" name="display12" id="display012" value="0"></input>
+<input type="radio" name="radio1" onclick=""></input><br>
+<input type="text" cols="8" name="display22" id="display022" value="0"></input>
+<input type="radio" name="radio2" onclick=""></input><br>
+<input type="text" cols="8" name="display32" id="display322" value="0"></input>
 </form>
 </p>
 </body>
